@@ -1,20 +1,19 @@
-Summary:	Note Editor is an editor for music notation
-Summary(pl):	Note Editor jest edytorem notacji muzycznej
+Summary:	Note Editor - an editor for music notation
+Summary(pl):	Note Editor - edytor notacji muzycznej
 Name:		noteedit
 Version:	2.8.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
-Source0:	http://download.berlios.de/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://download.berlios.de/noteedit/%{name}-%{version}.tar.gz
 # Source0-md5:	c707a0c67254784b912dabc6545e8125
 Patch0:		%{name}-desktop.patch
 URL:		http://noteedit.berlios.de/
 BuildRequires:	automake
 BuildRequires:	kdelibs-devel
+BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	tse3-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_htmldir	%{_docdir}/kde/HTML
 
 %description
 Note Editor is an editor for music notation that supports an unlimited
@@ -25,16 +24,14 @@ are MIDI, MusiXTeX, LilyPond, PMX, MUP, and TSE3.
 %description -l pl
 Note Editor jest edytorem notacji muzycznej. Obs³ugiwane formaty to
 pliki MIDI, TSE3 (import), MIDI, MusiXTeX, LilyPond, PMX, MUP, i TSE3
-(export)
+(eksport).
 
 %prep
 %setup -q
 %patch0 -p1
 
 %build
-kde_appsdir="%{_applnkdir}"; export kde_appsdir
-kde_htmldir="%{_htmldir}"; export kde_htmldir
-kde_icondir="%{_pixmapsdir}"; export kde_icondir
+kde_htmldir="%{_kdedocdir}"; export kde_htmldir
 cp -f /usr/share/automake/config.sub admin
 %configure \
 	--with-qt-libraries=%{_libdir} \
