@@ -1,13 +1,13 @@
 Summary:	Note Editor is an editor for music notation
 Summary(pl):	Note Editor jest edytorem notacji muzycznej
 Name:		noteedit
-Version:	2.3.3
+Version:	2.8.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
-Source0:	http://tan.informatik.tu-chemnitz.de/cgi-bin/nph-sendbin.cgi/~jan/%{name}/%{name}-%{version}.tgz
-# Source0-md5:	e876bc7ec9a711aab8125b0b950ca098
-URL:		http://rnvs.informatik.tu-chemnitz.de/~jan/noteedit/noteedit.html
+Source0:	http://download.berlios.de/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	
+URL:		http://noteedit.berlios.de/
 BuildRequires:	kdelibs-devel
 BuildRequires:	tse3-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
