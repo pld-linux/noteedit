@@ -8,6 +8,7 @@ Group:		X11/Applications/Multimedia
 Source0:	http://download.berlios.de/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	c707a0c67254784b912dabc6545e8125
 URL:		http://noteedit.berlios.de/
+BuildRequires:	automake
 BuildRequires:	kdelibs-devel
 BuildRequires:	tse3-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -32,7 +33,11 @@ pliki MIDI, TSE3 (import), MIDI, MusiXTeX, LilyPond, PMX, MUP, i TSE3
 kde_appsdir="%{_applnkdir}"; export kde_appsdir
 kde_htmldir="%{_htmldir}"; export kde_htmldir
 kde_icondir="%{_pixmapsdir}"; export kde_icondir
+cp -f /usr/share/automake/config.sub admin
 %configure \
+	--with-qt-libraries=%{_libdir} \
+	--with-libtse3-include=%{_includedir} \
+	--with-libtse3-libs=%{_libdir} \
 	--with-printing
 %{__make}
 
@@ -59,5 +64,5 @@ rm -rf $RPM_BUILD_ROOT
 %lang(de) %doc FAQ.de
 %attr(755,root,root) %{_bindir}/%{name}
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
-%{_applnkdir}/Utilities/%{name}.desktop
+# %{_applnkdir}/Utilities/%{name}.desktop
 %{_datadir}/apps/%{name}
