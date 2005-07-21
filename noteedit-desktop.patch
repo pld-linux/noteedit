@@ -1,0 +1,14 @@
+--- noteedit-2.8.0/noteedit/noteedit.desktop~	2005-07-05 18:46:39.000000000 +0000
++++ noteedit-2.8.0/noteedit/noteedit.desktop	2005-07-21 08:55:02.141830104 +0000
+@@ -8,7 +8,11 @@
+ Comment=Note editor
+ Comment[de]=Noteneditor
+ Comment[sv]=Notredigerare
++Comment[pl]=Edytor nut
+ Terminal=0
+ Icon=noteedit
+ ServiceTypes=Browser/View
+ X-KDE-Library=libnoteedit
++Categories=Qt;KDE;Audio;
++Encoding=UTF-8
++# vi: encoding=utf-8

@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://download.berlios.de/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	c707a0c67254784b912dabc6545e8125
+Patch0:		%{name}-desktop.patch
 URL:		http://noteedit.berlios.de/
 BuildRequires:	automake
 BuildRequires:	kdelibs-devel
@@ -28,6 +29,7 @@ pliki MIDI, TSE3 (import), MIDI, MusiXTeX, LilyPond, PMX, MUP, i TSE3
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 kde_appsdir="%{_applnkdir}"; export kde_appsdir
@@ -47,6 +49,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -D noteedit/noteedit.desktop $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
+
 %find_lang %{name} --with-kde
 
 # no -devel - shut up check-files
@@ -64,5 +68,5 @@ rm -rf $RPM_BUILD_ROOT
 %lang(de) %doc FAQ.de
 %attr(755,root,root) %{_bindir}/%{name}
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
-# %{_applnkdir}/Utilities/%{name}.desktop
+%{_desktopdir}/%{name}.desktop
 %{_datadir}/apps/%{name}
