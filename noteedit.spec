@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://download.berlios.de/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	
+# Source0-md5:	c707a0c67254784b912dabc6545e8125
 URL:		http://noteedit.berlios.de/
 BuildRequires:	kdelibs-devel
 BuildRequires:	tse3-devel
