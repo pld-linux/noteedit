@@ -1,5 +1,5 @@
 Summary:	Note Editor - an editor for music notation
-Summary(pl.UTF-8):   Note Editor - edytor notacji muzycznej
+Summary(pl.UTF-8):	Note Editor - edytor notacji muzycznej
 Name:		noteedit
 Version:	2.8.0
 Release:	1
