@@ -1,5 +1,5 @@
 Summary:	Note Editor - an editor for music notation
-Summary(pl.UTF-8):	Note Editor - edytor notacji muzycznej
+Summary(pl):	Note Editor - edytor notacji muzycznej
 Name:		noteedit
 Version:	2.8.0
 Release:	1
@@ -21,8 +21,8 @@ number of staffs and up to 9 voices per staff. The import formats are
 MIDI files, recorded from MIDI keyboards and TSE3. The export formats
 are MIDI, MusiXTeX, LilyPond, PMX, MUP, and TSE3.
 
-%description -l pl.UTF-8
-Note Editor jest edytorem notacji muzycznej. Obs≈Çugiwane formaty to
+%description -l pl
+Note Editor jest edytorem notacji muzycznej. Obs≥ugiwane formaty to
 pliki MIDI, TSE3 (import), MIDI, MusiXTeX, LilyPond, PMX, MUP, i TSE3
 (eksport).
 
