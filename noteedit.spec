@@ -1,13 +1,12 @@
 Summary:	Note Editor - an editor for music notation
 Summary(pl):	Note Editor - edytor notacji muzycznej
 Name:		noteedit
-Version:	2.8.0
+Version:	2.8.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://download.berlios.de/noteedit/%{name}-%{version}.tar.gz
-# Source0-md5:	c707a0c67254784b912dabc6545e8125
-Patch0:		%{name}-desktop.patch
+# Source0-md5:	653985c131afce45f0aa401fe4930909
 URL:		http://noteedit.berlios.de/
 BuildRequires:	automake
 BuildRequires:	kdelibs-devel
@@ -28,7 +27,6 @@ pliki MIDI, TSE3 (import), MIDI, MusiXTeX, LilyPond, PMX, MUP, i TSE3
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 kde_htmldir="%{_kdedocdir}"; export kde_htmldir
